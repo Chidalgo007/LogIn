@@ -1,0 +1,15 @@
+import {logOut} from "../Components/ManageLog.jsx";
+
+export const Welcome = (props) => {
+	const {setUser} = props
+	return (
+		<div className="realative full-center flex justify-center items-center">
+
+			<div className="absolute top-[33.5%] left-[25.6%] z-10 text-[12em] font-extrabold before:content-['WELCOME'] before:text-fuchsia-400 before:absolute before:top-[-2.4%] before:left-[0.6%]">WELCOME</div>
+
+			<button className="absolute top-2 right-4 text-md font-bold underline-offset-4 hover:text-fuchsia-600 hover:cursor-pointer hover:underline"
+			onClick={()=>logOut(setUser)}
+			>LOG OUT</button>
+		</div>
+	)
+}

@@ -1,0 +1,16 @@
+import {useState} from "react";
+import {Log} from "./Log.jsx";
+import {Welcome} from "./Welcome.jsx";
+
+
+function App() {
+	const [user, setUser] = useState(false)
+	return (
+		<>
+			{user?<Welcome setUser={setUser}/> : <Log user={user} setUser={setUser}/>}
+		</>
+
+	)
+}
+
+export default App

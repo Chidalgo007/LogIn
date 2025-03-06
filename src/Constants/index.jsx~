@@ -1,0 +1,67 @@
+// Import the functions you need from the SDKs you need
+import {initializeApp} from "firebase/app";
+import {
+	createUserWithEmailAndPassword,
+	getAuth,
+	onAuthStateChanged,
+	signInWithEmailAndPassword,
+	signOut
+} from "firebase/auth"
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+	apiKey: "AIzaSyDBf2pn_q_jKrrGSbMZOlvgNmuWCpXXXwQ",
+	authDomain: "reactauthlogin-a5679.firebaseapp.com",
+	projectId: "reactauthlogin-a5679",
+	storageBucket: "reactauthlogin-a5679.firebasestorage.app",
+	messagingSenderId: "758480588391",
+	appId: "1:758480588391:web:7631cb711d51158061cec2"
+};
+
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig);
+// Initialize Firebase Authentication
+const auth = getAuth(firebaseApp)
+
+// create user with email & passwords
+export const register = async (email, password) => {
+	try {
+		const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+		console.log("register", userCredential.user)
+
+	} catch (error) {
+		console.log("Error register user ", error.code, error.message)
+	}
+}
+// sign in with email & password
+export const signIn = async (email, password, setUserCheck) => {
+	try {
+		const userCredential = await signInWithEmailAndPassword(auth, email, password, setUserCheck)
+
+		console.log("log in", userCredential.user)
+		setUserCheck(true)
+	} catch (error) {
+		setUserCheck(false)
+		console.log("Error signing in ", error.code, error.message)
+	}
+}
+export const checkAuth = () => {
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+			// User is signed in, see docs for a list of available properties
+			// https://firebase.google.com/docs/reference/js/firebase.User
+			const uid = user.uid;
+			// ...
+		} else {
+			// User is signed out
+			// ...
+		}
+	})
+}
+
+export const logOut = () => {
+	signOut(auth)
+}
+
