@@ -33,21 +33,6 @@ const firebaseApp = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication
 const auth = getAuth(firebaseApp)
 
-const facebookProvider = new FacebookAuthProvider();
-
-// sign in with facebook
-export const signInWithFacebook = async (setUser) => {
-	try {
-		const result = await signInWithPopup(auth, facebookProvider)
-		const user = result.user
-		setUser(true)
-		console.log("sign in with facebook", user)
-	} catch (error) {
-		console.log("Error signing in with facebook ", error.code, error.message)
-		console.log("Error signing in with facebook ", error.code, error.customData.email)
-	}
-}
-
 // sign in with google
 export const signInWithGoogle = async (setUser) => {
 	try {
