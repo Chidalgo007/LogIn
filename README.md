@@ -1,8 +1,24 @@
-# React + Vite
+🔐 Fully Functional Login System
+A fully functional login page with the following features:
+✅ User registration with email verification
+✅ Login with email & password
+✅ Forgot password functionality
+✅ Google authentication for quick sign-in
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Technologies Used
+🟠 Kotlin (for Android) / ⚛️ React (for web)
+🔥 Firebase Authentication
+🎨 Modern UI with Material Design
+📷 Preview
 
-Currently, two official plugins are available:
+![image](https://github.com/user-attachments/assets/30842977-7650-4523-be07-c19ea332868c)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📌 How to Use
+Clone the repository:
+git clone https://github.com/Chidalgo007/LogIn.git
+Install dependencies:
+npm install  # For web  
+Run the app:
+npm start  # For web  
+
+📫 Connect with Me
