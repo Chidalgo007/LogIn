@@ -12,7 +12,7 @@ A fully functional login page with the following features:<br/>
 🎨 Modern UI with Material Design<br/>
 <h3>📷 Preview</h3>
 <br/>
-![image](https://github.com/user-attachments/assets/30842977-7650-4523-be07-c19ea332868c)
+<img src="https://github.com/user-attachments/assets/30842977-7650-4523-be07-c19ea332868c" />
 <br/>
 <h3>📌 How to Use</h3>
 <strong>Clone the repository:</strong> git clone https://github.com/Chidalgo007/LogIn.git<br/>
